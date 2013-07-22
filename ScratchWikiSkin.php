@@ -109,8 +109,8 @@ class ScratchWikiSkinTemplate extends BaseTemplate{
 				
 				<h1>Hilf dem Wiki!</h1>
 				<div class=box-content>
-				Das Scratch-Wiki ist von Scratchern für Scratcher. Möchtest du mitmachen?<br><br>
-				<a href="/wiki/Scratch-Wiki:Mitmachen!">Mehr übers Mitmachen erfahren!</a><br><br>
+				Das Scratch-Wiki ist von Scratchern f&uuml;r Scratcher. M&ouml;chtest du mitmachen?<br><br>
+				<a href="/wiki/Scratch-Wiki:Mitmachen!">Mehr &uuml;bers Mitmachen erfahren!</a><br><br>
 				<a href="/wiki/Scratch-Wiki:Gemeinschafts-Portal">Lies doch mal die Diskussionen im Gemeinschaftsportal</a>
 				</div>
 				
@@ -125,7 +125,7 @@ class ScratchWikiSkinTemplate extends BaseTemplate{
 				$o =	'<div class="box ctype ctype-helppage">'.
 			 	'<h1>Tutorial-Seite</h1>'.
 				'<div class=box-content>'.
-				'Diese Seite ist eine Schritt-für-Schritt-Anleitung besonders für neue Benutzer. Bitte achte hier besonderes auf <a href="/wiki/Scratch-Wiki:Hilfe:Konventionen_und_Stil_im_Artikel">Konventionen und Stil im Artikel.</a></div>'.
+				'Diese Seite ist eine Schritt-f&uuml;r-Schritt-Anleitung besonders f&uuml;r neue Benutzer. Bitte achte hier besonderes auf <a href="/wiki/Scratch-Wiki:Hilfe:Konventionen_und_Stil_im_Artikel">Konventionen und Stil im Artikel.</a></div>'.
 				'</div>';
 				echo $o;
 				
@@ -158,8 +158,8 @@ class ScratchWikiSkinTemplate extends BaseTemplate{
 </div>
 <footer>
 	<ul>
-		<li><a href="http://scratch.mit.edu/about/">Über Scratch</a></li>
-		<li><a href="/wiki/Scratch-Wiki:About">Über das Wiki</a></li>
+		<li><a href="http://scratch.mit.edu/about/">&Uuml;ber Scratch</a></li>
+		<li><a href="/wiki/Scratch-Wiki:About">&Uuml;ber das Wiki</a></li>
 		<li><a href="http://scratch.mit.edu/educators/">Lehrpesonen</a></li>
 		<li><a href="http://scratch.mit.ed/parents/">Eltern</a></li>
 		<li><a href="http://scratch.mit.edu/community_guidelines/">Regeln</a></li>
