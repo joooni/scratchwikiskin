@@ -49,19 +49,19 @@ class ScratchWikiSkinTemplate extends BaseTemplate{
 			<a class= "scratch" href = "http://scratch.mit.edu"></a>
 		
 		<ul class="left">
-			<li><a href="http://scratch.mit.edu/projects/editor/">Create</a></li>
-			<li><a href="http://scratch.mit.edu/explore/?date=this_month">Explore</a></li>
-			<li><a href="http://scratch.mit.edu/discuss/">Discuss</a></li>
-			<li class = "last"><a href="http://scratch.mit.edu/help/">Help</a></li>
+			<li><a href="http://scratch.mit.edu/projects/editor/">Entwickeln</a></li>
+			<li><a href="http://scratch.mit.edu/explore/?date=this_month">Erforschen</a></li>
+			<li><a href="http://scratch.mit.edu/discuss/">Diskutieren</a></li>
+			<li class = "last"><a href="http://scratch.mit.edu/help/">Hilfe</a></li>
 		
 		<!-- search -->
 			<li>
 				<form action="<?php $this->text( 'wgScript' ) ?>" class="search">
 					<!--<span class="glass"><i></i></span>-->
 					<input type= "submit" class= "glass" value= ""> 
-					<input type="search" id="searchInput" accesskey="f" title="Search Scratch Wiki [alt-shift-f]"  name="search" autocomplete="off" placeholder="Search the Wiki"  />
+					<input type="search" id="searchInput" accesskey="f" title="Durchsuche das Scratch-Wiki [alt-shift-f]"  name="search" autocomplete="off" placeholder="Durchsuche das Wiki"  />
 					<!--<input type="submit" class="searchButton" id="searchGoButton" title="Go to a page with this exact name if exists" value="Go" name="go">-->
-					<input type="hidden" class="searchButton" id="mw-searchButton" title="Search the pages for this text" value="Search" name="fulltext" />
+					<input type="hidden" class="searchButton" id="mw-searchButton" title="Durchsuche alle Seiten nach diesem Begriff" value="Suche" name="fulltext" />
 					<input type="hidden" value="Special:Search" name="title" />
 				</form>
 			</li>
@@ -72,7 +72,7 @@ class ScratchWikiSkinTemplate extends BaseTemplate{
 			<!-- user links -->
 <?php	if (!$wgUser->isLoggedIn()) { ?>
 			<!--<li class = last><a href=" 	Special:Userlogin">Log in to the Wiki</a></li>-->
-			<li class = last><a href="<?php if (isset($this->data['personal_urls']['anonlogin'])){echo htmlspecialchars($this->data['personal_urls']['anonlogin']['href']);}else{echo $this->data['personal_urls']['login']['href'];}?>">Log in to the Wiki</a></li>
+			<li class = last><a href="<?php if (isset($this->data['personal_urls']['anonlogin'])){echo htmlspecialchars($this->data['personal_urls']['anonlogin']['href']);}else{echo $this->data['personal_urls']['login']['href'];}?>">Ins Wiki einloggen</a></li>
 <?php	} else { ?>
 			<li id="userfcttoggle" class="last"><a><?=htmlspecialchars($wgUser->mName)?><span class = caret></span></a></li>
 			<ul id=userfctdropdown class="dropdownmenu"><?php foreach ($this->data['personal_urls'] as $key => $tab):?>
@@ -85,7 +85,7 @@ class ScratchWikiSkinTemplate extends BaseTemplate{
 <div class="container main">
 	<div class=main-inner>
 		<div class=left>
-		<div class = "wikilogo_space"><a class = "wikilogo" href = "<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ); ?>" title = "Scratch Wiki Main Page"></a></div>
+		<div class = "wikilogo_space"><a class = "wikilogo" href = "<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ); ?>" title = "Scratch-Wiki Hauptseite"></a></div>
 <?php		foreach ($this->getSidebar() as $box): if ($box['header']!='Toolbox'||$wgUser->isLoggedIn()){?>
 			<div class=box>
 				<!-- <?=print_r($box);?> -->
@@ -107,11 +107,11 @@ class ScratchWikiSkinTemplate extends BaseTemplate{
 			if (!$wgUser->isLoggedIn()) { ?>
 			<div class=box>
 				
-				<h1>Help the wiki!</h1>
+				<h1>Hilf dem Wiki!</h1>
 				<div class=box-content>
-				The Scratch Wiki is made by and for Scratchers. Do you want to contribute?<br><br>
-				<a href="/wiki/Contribute_to_the_Scratch_Wiki">Learn more about joining as an editor!</a><br><br>
-				<a href = "/wiki/Scratch_Wiki_talk:Community_Portal">See discussions in the Community Portal</a>
+				Das Scratch-Wiki ist von Scratchern für Scratcher. Möchtest du mitmachen?<br><br>
+				<a href="/wiki/Scratch-Wiki:Mitmachen!">Mehr übers Mitmachen erfahren!</a><br><br>
+				<a href="/wiki/Scratch-Wiki:Gemeinschafts-Portal">Lies doch mal die Diskussionen im Gemeinschaftsportal</a>
 				</div>
 				
 			</div>
@@ -121,11 +121,11 @@ class ScratchWikiSkinTemplate extends BaseTemplate{
 			<?php if( $this->data['newtalk'] ) { ?><div class="box"><h1><?php $this->html('newtalk') ?></h1></div><?php } ?>
 			<?php if( $this->data['catlinks'] && $wgUser->isLoggedIn()) {
 			$cat = $this->data['catlinks'];
-			if(strpos($cat, 'How To Pages')> 0) {
+			if(strpos($cat, 'Tutorials')> 0) {
 				$o =	'<div class="box ctype ctype-helppage">'.
-			 	'<h1>How To page</h1>'.
+			 	'<h1>Tutorial-Seite</h1>'.
 				'<div class=box-content>'.
-				'This page provides step-by-step help on how to do something for new users. Before editing, please read the <a href = /wiki/Help:How_To_pages>How To page guidelines.</a></div>'.
+				'Diese Seite ist eine Schritt-für-Schritt-Anleitung besonders für neue Benutzer. Bitte achte hier besonderes auf <a href="/wiki/Scratch-Wiki:Hilfe:Konventionen_und_Stil_im_Artikel">Konventionen und Stil im Artikel.</a></div>'.
 				'</div>';
 				echo $o;
 				
@@ -158,13 +158,15 @@ class ScratchWikiSkinTemplate extends BaseTemplate{
 </div>
 <footer>
 	<ul>
-		<li><a href="http://scratch.mit.edu/about/">About</a></li>
-		<li><a href="http://scratch.mit.edu/educators/">Educators</a></li>
-		<li><a href="http://scratch.mit.ed/parents/">Parents</a></li>
-		<li><a href="http://scratch.mit.edu/community_guidelines/">Community Guidelines</a></li>
-		<li><a href="http://scratch.mit.edu/contact-us/">Contact Us</a></li>
+		<li><a href="http://scratch.mit.edu/about/">Über Scratch</a></li>
+		<li><a href="/wiki/Scratch-Wiki:About">Über das Wiki</a></li>
+		<li><a href="http://scratch.mit.edu/educators/">Lehrpesonen</a></li>
+		<li><a href="http://scratch.mit.ed/parents/">Eltern</a></li>
+		<li><a href="http://scratch.mit.edu/community_guidelines/">Regeln</a></li>
+		<li><a href="/wiki/Das_deutschsprachige_Scratch-Wiki:Urheberrechte">Urheberrecht des Wikis</a></li>
+		<li><a href="http://scratch.mit.edu/contact-us/">Kontakt</a></li>
 	</ul>
-	<p>Scratch is a project of the Lifelong Kindergarten Group at the MIT Media Lab</p>
+	<p>Scratch ist ein Projekt der Lifelong-Kindergarten-Gruppe am Media-Lab des MIT</p>
 </footer>
 
         <?php $this->printTrail(); ?>
