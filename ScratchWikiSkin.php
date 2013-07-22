@@ -160,7 +160,7 @@ class ScratchWikiSkinTemplate extends BaseTemplate{
 	<ul>
 		<li><a href="http://scratch.mit.edu/about/">&Uuml;ber Scratch</a></li>
 		<li><a href="/wiki/Scratch-Wiki:About">&Uuml;ber das Wiki</a></li>
-		<li><a href="http://scratch.mit.edu/educators/">Lehrpesonen</a></li>
+		<li><a href="http://scratch.mit.edu/educators/">Lehrpersonen</a></li>
 		<li><a href="http://scratch.mit.ed/parents/">Eltern</a></li>
 		<li><a href="http://scratch.mit.edu/community_guidelines/">Regeln</a></li>
 		<li><a href="/wiki/Das_deutschsprachige_Scratch-Wiki:Urheberrechte">Urheberrecht des Wikis</a></li>
