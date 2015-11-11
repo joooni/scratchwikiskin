@@ -52,6 +52,7 @@ class ScratchWikiSkinTemplate extends BaseTemplate{
 			<li><a href="http://scratch.mit.edu/projects/editor/">Entwickeln</a></li>
 			<li><a href="http://scratch.mit.edu/explore/?date=this_month">Erforschen</a></li>
 			<li><a href="http://scratch.mit.edu/discuss/">Diskutieren</a></li>
+			<li><a href="https://scratch.mit.edu/about/">&Uuml;ber Scratch</a></li>
 			<li class = "last"><a href="http://scratch.mit.edu/help/">Hilfe</a></li>
 		
 		<!-- search -->
@@ -167,6 +168,8 @@ class ScratchWikiSkinTemplate extends BaseTemplate{
 		<li><a href="http://scratch.mit.edu/contact-us/">Kontakt</a></li>
 	</ul>
 	<p>Scratch ist ein Projekt der Lifelong-Kindergarten-Gruppe am Media-Lab des MIT</p>
+	<br><br><br>
+        <a href="https://creativecommons.org/licenses/by-sa/3.0/de/"><img src="http://scratch-dach.info/w/images/d/dd/Cc-by-sa_340x340.png" alt="CC-BY-SA" width="100px"></a>
 </footer>
 
         <?php $this->printTrail(); ?>
